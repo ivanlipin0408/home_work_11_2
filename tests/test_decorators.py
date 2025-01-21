@@ -18,4 +18,4 @@ def test_log_error(capsys):
 
     my_function(1, "2")
     captured = capsys.readouterr()
-    assert "my_function error: unsupported operand type(s) for +: 'int' and 'str'. Inputs: ((1, '2')\n" in captured.out
+    assert "my_function error: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '2')\n" in captured.out

@@ -6,15 +6,18 @@ log_scripts = current_dir / "data" / "mylog.txt"
 
 
 def log(filename=None):
+    """Функция логирует результат работы функции: указывает на успешное завершение или на ошибку с указанием
+    аргументов функции"""
+
     def logging(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
             try:
                 result = func(*args, **kwargs)
-                log_result = f"{func.__name__} ok. "
+                log_result = f"{func.__name__} ok"
 
             except Exception as e:
-                log_result = f"{func.__name__} error: {str(e)}. Inputs: ({args}"
+                log_result = f"{func.__name__} error: {str(e)}. Inputs: {args}{kwargs}"
 
             finally:
                 if filename:

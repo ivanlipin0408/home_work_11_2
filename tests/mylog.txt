@@ -4,3 +4,4 @@ my_function_second ok. Time:0:00:00.000006
 my_function_second ok. 
 my_function_second ok. 
 my_function ok. 
+my_function ok
