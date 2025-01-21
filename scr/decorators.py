@@ -1,9 +1,5 @@
-from datetime import datetime
 from functools import wraps
 from pathlib import Path
-from typing import Any, Callable
-
-from mypy.util import os_path_join
 
 current_dir = Path(__file__).parent.parent.resolve()
 log_scripts = current_dir / "data" / "mylog.txt"

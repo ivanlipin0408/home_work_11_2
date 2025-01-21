@@ -1,7 +1,3 @@
-from fileinput import filename
-
-import pytest
-
 from scr.decorators import log
 
 
